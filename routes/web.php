@@ -72,7 +72,7 @@ Route::group(['prefix' => 'mentor', 'middleware' => ['role:mentor']], function (
 	Route::get('/pengumuman/nontenant', 'Mentor\MentorController@tenant')->name('mentor.non-tenant');
 	Route::get('/pengumuman/search', 'Mentor\MentorController@search');
 	Route::get('/pengumuman/{slug}', 'Mentor\MentorController@show');
-	Route::get('/kategori/{id}', 'Mentor\MentorController@kategori')->name('mentor.kategori');
+	Route::get('/kategori/{id}', 'Mentor\MentorController@kategori');
 });
 
 Route::group(['prefix' => 'tenant', 'middleware' => ['role:tenant']], function () {
