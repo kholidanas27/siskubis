@@ -81,7 +81,7 @@ Route::group(['prefix' => 'tenant', 'middleware' => ['role:tenant']], function (
 	Route::get('/pengumuman', 'Tenant\TenantController@pengumuman')->name('tenant.pengumuman');
 	Route::get('/pengumuman/nontenant', 'Tenant\TenantController@tenant')->name('tenant.non-tenant');
 	Route::get('/pengumuman/search', 'Tenant\TenantController@search');
-	Route::get('/pengumuman/{slug}', 'Tenant\TenantController@show')->name('coba');
+	Route::get('/pengumuman/{slug}', 'Tenant\TenantController@show')->name('coba1');
 	Route::get('/kategori/{id}', 'Tenant\TenantController@kategori')->name('tenant.kategori');
 });
 
